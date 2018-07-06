@@ -1,0 +1,11 @@
+hébergeur en ligne
+
+URL : afpadlchartres.000webhostapp.com
+FTP : files.000webhost.com
+USER FTP : afpadlchartres
+MDP FTP : Afpa2018
+PORT FTP : 21
+Base de données
+URL : https://databases.000webhost.com/index.php
+User : id4919232_dlcommunity_user
+Mot de passe : dlcommunity2018
