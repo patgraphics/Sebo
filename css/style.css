@@ -1,0 +1,251 @@
+#slideshow img{
+    position: asolute;
+    top: 10em;
+    width: 150px;
+    height: 150px;
+}
+.slide {
+
+    width: 200px;
+    height: 200px;
+}
+.line{
+    position: relative;
+    padding: 30px;
+
+}
+.liens{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+.middle {
+    position: absolute;
+    left: 1%;
+}
+p.outset {
+    outline-style: outset;
+    text-align: right;
+    color: whitesmoke;
+}
+
+body {
+    margin-left: 0px;
+    margin-top: 0px;
+    font-family: 'Ubuntu', cursive;
+    background-color: rgb(50, 50, 50);
+    max-width: 1800px;
+}
+h2{
+    color: cadetblue;
+    margin-left: 50px;
+}
+h4{
+    color: lightgoldenrodyellow;
+    margin-left: 150px;
+}
+table{
+    padding: 20px;
+    width: 50%;
+    background-color: lightyellow;
+    margin: 10px;
+    border: 2px;
+    border-color: red;
+    border-radius: 1em;
+    text-align: left;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: red;
+}
+.bas{
+    margin-top: 30px;
+    margin-left: 50px;
+    color: #FFFFE0;
+}  
+#Bloc
+{
+    padding: 50px;
+    margin: auto ;
+    width: 45%;
+    background-color: rgb(192, 226, 208) ;
+}
+#central
+{
+    padding: 50px;
+    margin: auto ;
+    width: 45%;
+    height: 500px;
+    background-color: rgb(192, 226, 208) ;
+}
+#d1{
+    display:none;background-color:lightblue;padding: 10px;max-width: 180px;
+    font-family: geneva;font-size: 10px;
+}
+#d2{
+    display:none;background-color:lightgreen;padding: 10px;
+    font-family: geneva;font-size: 10px;
+
+}
+#d3{
+    display:none;background-color:lightyellow;padding: 10px;
+    font-family: geneva;font-size: 10px;
+}
+#d4{
+    display:none;background-color:lightpink;padding: 10px;
+    font-family: geneva;font-size: 10px;
+}    
+.tete
+{
+    width: 100%;
+    height: 10%;
+    text-align: center ;
+    size: 6;
+    text-align: center;
+    font-family: geneva;
+    background-color: black ;
+    color: white;
+}
+.nav
+{
+    width: 20%;
+    height: 80%;
+    background-color: rgb(66,83,99); ;
+}
+.section
+{
+    width: 60%;
+    height: 80%;
+    background-image: url("bkgrndcntr.png");
+    color: darkgrey;
+}
+.recherche
+{
+    width: 90%;
+    height: 80%;
+    background-color: rgb(00, 66, 99) ;
+}
+.pied
+{
+    width: 100% ;
+    height: 10%;
+    background-color: #009999 ;
+}
+.btn
+{
+    border: none;
+    color: white;
+    overflow: hidden;
+    margin: 1rem;
+    padding: 0;
+    text-transform: uppercase;
+    width: 150px;
+    height: 40px;
+    background-color: grey;
+    border: 2px solid cyan;
+    border-radius: 25px 50px;
+    color: darkblue;
+    position: relative;
+    box-shadow: 3px 5px #888888;
+}
+
+.panel{
+    width:90%;max-width:190px;padding:12px 12px;margin-left:50px;margin-bottom:20px;
+}
+button:hover {
+    background-color: rgb(255, 204, 255);
+}
+p{
+    padding: 0px 40px 0px 40px;
+    text-align: justify;
+    font-family: geneva;
+    margin-left: 150px;
+    color: lightyellow;
+}
+td {
+    text-align: center;
+    font-size: x-large;
+    vertical-align: middle;
+}
+.boxrech{
+    padding: 10px;
+
+}
+label{
+    color: lightskyblue;
+
+
+}
+input{
+    padding: 5px;
+    border: 5px;
+    border-radius: 2em;
+    width:150px;   
+    height:10px; 
+}
+.bt2{
+    background-color: lightgoldenrodyellow;
+    justify-content: center;
+    height: 40px;
+    width: 100px ;
+    border-radius : 5px;
+    margin-top: 20px ;
+    letter-spacing: 2px;
+
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.mail{
+
+    margin-left:  20px;
+
+
+}
+.elcontact
+{
+    padding: 20px;
+    width: 250px ;
+    height: 300px ;
+    margin: 2px 10px 0px 5px ;
+    box-shadow: 0px 3px 1px 0px rgba(145, 127, 127, 1);
+    background-color: #5ab7bd;
+}
+.webmaster{
+    font-family: Geneva;
+    font-size: 8px;
+    color : white;
+    text-align: right;
+    alignment-baseline: middle;
+}
+.droite{
+    position: absolute;
+    right: 50px;
+    top:100px;
+}
+.gauche{
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    color:wheat;
+}
+
+
+
