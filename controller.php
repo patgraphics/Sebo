@@ -14,14 +14,17 @@ function connection($motpass = "", $pseudo = "") {
             //creation de variable de session 
             $_SESSION['idClient'] = $connection->getIdClient();
             $_SESSION['pseudo'] = $pseudo;
-            $_SESSION['time'] = time();
+            $_SESSION['time'] = time();          
             require ('welcome.php');
         } else {
             $error = $connection->getError();
+            print ("salut");
             cnx();
         }
     } else {
+        echo ("ça marche");
         cnx();
+        
     }
 }
 function cnx(){

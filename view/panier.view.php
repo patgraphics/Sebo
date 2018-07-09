@@ -3,7 +3,12 @@
 if (stristr($_SERVER['REQUEST_URI'], ".view.php"))
     header("location:../index.php");
 
-print "<h2>Panier</h2>";
+if(isset($_SESSION['pseudo'])){
+    echo'<h4>Bonjour '. $_SESSION['pseudo'].', sélectionnez un produit pour faire votre panier</h4>'  ;
+}
+else {
+    echo '<h4>Sélectionnez un produit pour faire votre panier</h4>'; 
+}
 ?>
 <html>
     <head>

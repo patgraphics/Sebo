@@ -44,7 +44,7 @@ h2{
 }
 h4{
     color: lightgoldenrodyellow;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 table{
     padding: 20px;
@@ -170,10 +170,9 @@ button:hover {
     background-color: rgb(255, 204, 255);
 }
 p{
-    padding: 0px 40px 0px 40px;
+    padding: 0px 20px 0px 20px;
     text-align: justify;
     font-family: geneva;
-    margin-left: 150px;
     color: lightyellow;
 }
 td {
@@ -237,8 +236,8 @@ input{
 }
 .droite{
     position: absolute;
-    right: 50px;
-    top:100px;
+    left: 50px;
+    bottom:100px;
 }
 .gauche{
     position: absolute;

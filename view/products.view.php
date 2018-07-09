@@ -7,13 +7,14 @@ echo" <h4>liste des produits par catégorie</h4>";
             <th>Catégorie</th>
             <th>Titre</th>
             <th>Auteur</th>
+            <th>Ajouter</th>
 
 
             <?php
             
         
             // On se connecte a la base en creant une instance unique
-             Singleconnex::identifier("root", "root");
+            Singleconnex::identifier("root", "root");
             $bdd = Singleconnex::getInstance();
             
             // On execute la requete sql de selection des trois champs
@@ -21,8 +22,9 @@ echo" <h4>liste des produits par catégorie</h4>";
 
             // On affiche chaque entree une a une
             while ($donnees = $reponse->fetch(PDO::FETCH_ASSOC)) {
-                print " <tr><td> " . $donnees['categorie'] . "</td><td> " . $donnees['titre'] . "</td><td> " . $donnees['auteur'] . "</td></tr>";
+                print " <tr><td> " . $donnees['categorie'] . "</td><td> " . $donnees['titre'] . "</td><td> " . $donnees['auteur'] . "</td><td><input type=\"checkbox\" name=\"checked\"</td></tr>";
             }
+            print "<tr><td></td><td></td><td></td><td><button type=\"submit\">Valider</button></td></tr>";
 
             /* POUR INFO j aurais pu l ecrire comme ceci ce qui donne la meme chose
               foreach ($reponse as $key => $value) {
