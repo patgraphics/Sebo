@@ -9,12 +9,12 @@ echo" <h4>liste des produits par catégorie</h4>";
         <script type="text/javascript" src="jq/jquery.easyui.min.js"></script>
 </head>
 <div class="latchav">
-    <table class="easyui-datagrid">
-        <thead>
-            <th>Catégorie</th>
-            <th>Titre</th>
-            <th>Auteur</th>
-            <th>Ajouter</th>
+    <table style="width: 60%;height: 600px;">
+        <thead style="text-align: center">
+            <th><h1>Catégorie</h1></th>
+            <th><h1>Titre</h1></th>
+            <th><h1>Auteur</h1></th>
+            <th><h1>Ajouter</h1></th>
         </thead>    
 
         <tbody>

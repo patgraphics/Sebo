@@ -14,10 +14,10 @@
         <div class="flex-container">
             <div class="navbar">
                 <a href="index.php?action=acc">Accueil</a>
+                <a href="index.php?action=pan">Liste</a>
                 <a href="index.php?action=prd">Produits</a>
-                <a href="index.php?action=pan">Panier</a>
+                <a href="index.php?action=cde">Panier</a>
                 <a href="index.php?action=cnt">Contact</a>
-                <a href="index.php?action=new">New</a>                
             </div> 
 
             <div class="navcnx">

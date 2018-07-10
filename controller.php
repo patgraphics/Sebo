@@ -3,6 +3,8 @@
 require_once('mdl/Requete.php');
 require_once('mdl/Connection.php');
 require_once('mdl/Inscription.php');
+require_once('mdl/Commande.php');
+
 
 function connection($motpass = "", $pseudo = "") {
 
@@ -70,7 +72,13 @@ function ins(){
     require ('view/inscription.view.php');
 }
 
-
+function commande(){
+    //creation nouvelle commande
+    $c = new Commande();
+    //creation de variable de session 
+    $_SESSION['numCde'] = $c->getNumCde();
+    $_SESSION['etatCde'] = $c->getEtatCde();
+}
 function addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur){
     Requete::addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur);
     echo "your new article have been well inserted";
@@ -102,6 +110,6 @@ function modArticle(){
     //TODO modify article
 }
 function administrateur(){
-    //TODO admin page is ready but not in function yet
+    //TODO admin page is ready but it has to be connected
     require ('admin/admin.view.php');
 }

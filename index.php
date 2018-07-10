@@ -66,6 +66,9 @@ if (isset($_GET["action"])) {
         case "prd":
             produits();
             break;
+        case "cde":
+            commande();
+            break;
  
         default:
             accueil();

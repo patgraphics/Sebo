@@ -33,4 +33,14 @@ if (isset($_SESSION['pseudo'])) {
 
     </body>
 
+    <div class="droite">
+     <div class="easyui-datalist" title="Checkbox des articles" style="width:400px;height:250px" data-options="
+            url: 'view/titre.php',
+            method: 'get',
+            checkbox: true,
+            selectOnCheck: false,
+            onBeforeSelect: function(){return false;}
+            ">ici
+    </div>
+    </div>
 </html>

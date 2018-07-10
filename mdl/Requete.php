@@ -109,4 +109,14 @@ class Requete {
         $sql = "INSERT INTO `Client` (`idClient`, `nom`, `prenom`, `numero`, `adresse`, `codePostal`, `ville`, `email`, `pseudo`, `password`) VALUES (NULL,'".$nom."','".$prenom."', '".$numero."', '".$adresse."', '".$codePostal."', '".$ville."', '".$email."','".$pseudo."','".$password."')";
         self::addDatas($sql); 
     }
+    
+    public static function addLigne($refArticle, $qteArtCde){
+        $sql = "INSERT INTO `ligneCde` (`refArticle`,`qteArtCde`) VALUES ('".$refArticle."','".$qteArtCde."')";
+        self::addDatas($sql);
+    }
+    
+    public static function addCommande($idClient, $dateCde, $etatCde){
+        $sql = "INSERT INTO `Commande` (`idClient`,`dateCde`,`etatCde`) VALUES ('".$idClient."','".$dateCde."','".$etatCde."')";
+        self::addDatas($sql);
+    }
 }
