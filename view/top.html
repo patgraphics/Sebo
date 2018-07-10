@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Sebo Media Provider</title>
@@ -20,11 +15,14 @@ and open the template in the editor.
             <a href="index.php?action=acc">Accueil</a>
             <a href="index.php?action=prd">Produits</a>
             <a href="index.php?action=pan">Panier</a>
-            <a href="index.php?action=ins">Inscription</a>
-            <a href="index.php?action=cnx">Connexion</a>
-            <a href="index.php?action=dcx">Déconnexion</a>
             <a href="index.php?action=cnt">Contact</a>
             <a href="index.php?action=new">New</a>
+            <?php if (!isset($_SESSION['pseudo'])) { ?>           
+                <a href="index.php?action=ins" style="text-align: right">Inscription</a>
+                <a href="index.php?action=cnx"style="text-align: right">Connexion</a>
+            <?php } else { ?>    
+                <a href="index.php?action=dcx"style="text-align: right">Déconnexion</a>
+            <?php } ?>
         </div>
     </body>
 </html>

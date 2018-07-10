@@ -56,9 +56,13 @@ table{
     border-radius: 1em;
     text-align: left;
 }
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: darkgreen;
     font-family: Arial, Helvetica, sans-serif;
 }
 .navbar a {
@@ -71,6 +75,23 @@ table{
 }
 .navbar a:hover {
     background-color: red;
+}    
+.navcnx {
+    display: flex;
+    float: left;
+    background-color: graytext;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navcnx a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navcnx a:hover {
+    background-color: lightsteelblue;   
 }
 .bas{
     margin-top: 30px;
@@ -88,8 +109,7 @@ table{
 {
     padding: 50px;
     margin: auto ;
-    width: 45%;
-    height: 500px;
+    width: 50%;
     background-color: rgb(192, 226, 208) ;
 }
 #d1{
@@ -243,7 +263,6 @@ input{
     position: absolute;
     left: 50px;
     top: 100px;
-    color:wheat;
 }
 
 

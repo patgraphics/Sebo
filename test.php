@@ -14,9 +14,11 @@ echo "<br>";
 $cd = Requete::selectFromWhere("Article","titre , auteur","type","CD");
 print_r($cd);
 echo "<br>";
-echo "____________________________________________________________";
-echo "<br>";
 
+echo json_encode($cd);
+echo "<br>";
+echo "_____________________________________________________________";
+echo "<br>";
 $art = Requete::selectFrom('Article', 'titre, auteur');
 print_r($art);
 echo "<br>";

@@ -26,11 +26,7 @@ echo" <h4>liste des produits par catégorie</h4>";
             }
             print "<tr><td></td><td></td><td></td><td><button type=\"submit\">Valider</button></td></tr>";
 
-            /* POUR INFO j aurais pu l ecrire comme ceci ce qui donne la meme chose
-              foreach ($reponse as $key => $value) {
-              echo $value["prenomPilote"]. " ". $value["nomPilote"]."<br>";
-              } */
-
+     
             $reponse->closeCursor(); // Termine le traitement de la requete
             Singleconnex::close(); //deconnexion de la base de donnees
             ?>

@@ -7,7 +7,7 @@ Points d'entrées pour rediriger l'utilisateur vers la page demandée
 Ce fichier sert de routeur et renvoie vers les fonctions du controlleur
  */
 //inclusion de l'entête html
-require("view/top.html");
+require("view/top.php");
 
 //appel de mon controlleur
 require ("controller.php");
@@ -36,6 +36,7 @@ if (isset($_GET["action"])) {
             deconnection();
             break;
         case "new":
+            echo "this is new";
             if(isset($_POST['type']) && isset($_POST['idCategorie']) && isset($_POST['prixUnitaire']) && isset($_POST['titre']) && isset( $_POST['auteur']) && isset($_POST['editeur'])){
                 if(($_POST['type'])!="" && ($_POST['idCategorie'])!="" && ($_POST['prixUnitaire'])!="" && ($_POST['titre'])!="" && ( $_POST['auteur'])!="" && ($_POST['editeur'])!=""){
                     addArticle($_POST['type'], $_POST['idCategorie'], $_POST['prixUnitaire'], $_POST['titre'], $_POST['auteur'], $_POST['editeur']); 

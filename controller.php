@@ -73,7 +73,7 @@ function ins(){
 
 function addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur){
     Requete::addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur);
-    require("view/accueil.view.php");
+    //require("view/accueil.view.php");
 }
 function add(){
     require("admin/new.view.php");
