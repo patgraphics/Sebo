@@ -3,7 +3,7 @@
 require 'Requete.php';
 
 
-            $reponse = ('SELECT Article.type, Article.titre, Article.auteur, Article.prixUnitaire, categorie.categorie FROM Article  INNER JOIN categorie ON categorie.idCategorie = Article.idCategorie ORDER BY categorie');
+            $reponse = ('SELECT Article.type, Article.titre, Article.auteur, Article.prixUnitaire, categorie.categorie FROM Article  INNER JOIN categorie ON categorie.idCategorie = Article.idCategorie ORDER BY type,categorie');
             
             $repo = Requete::getDatas($reponse);
 

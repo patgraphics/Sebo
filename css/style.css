@@ -36,7 +36,6 @@ body {
     margin-top: 0px;
     font-family: 'Ubuntu', cursive;
     background-color: rgb(50, 50, 50);
-    max-width: 1800px;
 }
 h2{
     color: cadetblue;
@@ -47,10 +46,8 @@ h4{
     margin-left: 100px;
 }
 table{
-    padding: 20px;
-    width: 50%;
     background-color: lightyellow;
-    margin: 10px;
+    /*margin: 10px;*/
     border: 2px;
     border-color: red;
     border-radius: 1em;
@@ -184,7 +181,7 @@ table{
 }
 
 .panel{
-    width:90%;max-width:190px;padding:12px 12px;margin-left:50px;margin-bottom:20px;
+    width:90%;max-width:760px;padding:2px 2px;margin-left:50px;
 }
 button:hover {
     background-color: rgb(255, 204, 255);
@@ -256,14 +253,15 @@ input{
 }
 .droite{
     position: absolute;
-    left: 50px;
+    right: 50px;
     bottom:100px;
 }
 .gauche{
     position: absolute;
-    left: 50px;
+    right: 50px;
     top: 100px;
 }
-
-
-
+.latchav{
+    position: relative;
+    left: 50px;
+}

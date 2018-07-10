@@ -36,7 +36,7 @@ if (isset($_GET["action"])) {
             deconnection();
             break;
         case "new":
-            echo "this is new";
+            echo " add a new article";
             if(isset($_POST['type']) && isset($_POST['idCategorie']) && isset($_POST['prixUnitaire']) && isset($_POST['titre']) && isset( $_POST['auteur']) && isset($_POST['editeur'])){
                 if(($_POST['type'])!="" && ($_POST['idCategorie'])!="" && ($_POST['prixUnitaire'])!="" && ($_POST['titre'])!="" && ( $_POST['auteur'])!="" && ($_POST['editeur'])!=""){
                     addArticle($_POST['type'], $_POST['idCategorie'], $_POST['prixUnitaire'], $_POST['titre'], $_POST['auteur'], $_POST['editeur']); 

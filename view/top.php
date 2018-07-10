@@ -17,6 +17,7 @@
                 <a href="index.php?action=prd">Produits</a>
                 <a href="index.php?action=pan">Panier</a>
                 <a href="index.php?action=cnt">Contact</a>
+                <a href="index.php?action=new">New</a>                
             </div> 
 
             <div class="navcnx">
