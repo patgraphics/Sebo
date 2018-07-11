@@ -18,6 +18,8 @@
                 <a href="index.php?action=prd">Produits</a>
                 <a href="index.php?action=cde">Panier</a>
                 <a href="index.php?action=cnt">Contact</a>
+                <a href="index.php?action=cde&amp;pseudo=<?= $_SESSION['pseudo'] ?>">dfs</a>
+                
             </div> 
 
             <div class="navcnx">

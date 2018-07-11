@@ -46,7 +46,8 @@ class Commande {
     
     public static function commande($idClient,$dateCde,$etatCde){
         Requete::addCommande($idClient, $dateCde, $etatCde);
-        echo "tata";
+        echo "<h4>Commande en cours de réalisation</h4>";
+        require ('view/order.view.php');
     }
 
 }

@@ -67,13 +67,26 @@ if (isset($_GET["action"])) {
             produits();
             break;
         case "cde":
-            commande();
+            if (isset($_SESSION['pseudo'])) {
+             
+                commande();
+            }
+            else {
+                echo "<h4>Veuillez vous connecter pour valider votre panier ou vous incrire pour vous connecter</h4>";
+                cnx();
+            }
             break;
  
         default:
             accueil();
             break;
     }
+}
+elseif (isset($_GET['art']) && $_GET['art'] == 1) {
+    afficharticle($_GET['refArticle']);
+}
+elseif (isset($_GET['com']) && $_GET['com'] == 1) {
+    affichecom($_GET['numCde']);
 }
 else {
     accueil ();

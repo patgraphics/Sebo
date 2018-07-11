@@ -119,4 +119,8 @@ class Requete {
         $sql = "INSERT INTO `Commande` (`idClient`,`dateCde`,`etatCde`) VALUES ('".$idClient."','".$dateCde."','".$etatCde."')";
         self::addDatas($sql);
     }
+    
+    public static function getArticle ($refArticle){
+        
+    }
 }

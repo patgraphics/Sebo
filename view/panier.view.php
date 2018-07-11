@@ -31,7 +31,6 @@ if (isset($_SESSION['pseudo'])) {
             </table>
         </div>
 
-    </body>
 
     <div class="droite">
      <div class="easyui-datalist" title="Checkbox des articles" style="width:400px;height:250px" data-options="
@@ -43,4 +42,5 @@ if (isset($_SESSION['pseudo'])) {
             ">ici
     </div>
     </div>
+    </body>
 </html>

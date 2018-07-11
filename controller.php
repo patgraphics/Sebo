@@ -73,9 +73,17 @@ function ins(){
 }
 
 function commande(){
-    //creation nouvelle commande
-    $c = new Commande();
-    //creation de variable de session 
+    //je met son idClient correspondant au pseudo dans la variable $cli
+    $client = Requete::selectFromWhere('Client', 'idClient', 'pseudo', $_SESSION['pseudo'] );
+        //test (print_r($client[0]);)
+    $cli=$client[0]['idClient'];
+    $dat=date('Y-m-d');
+    $eta='1';
+    //creation de la nouvelle commande
+    $c = new Commande($cli,$dat,$eta);
+    $c->commande($cli, $dat, $eta);
+        //test (echo"new order registred";)
+    //creation des variables de session 
     $_SESSION['numCde'] = $c->getNumCde();
     $_SESSION['etatCde'] = $c->getEtatCde();
 }
@@ -102,6 +110,18 @@ function produits(){
     require("view/products.view.php");
 }
 
+function afficharticle ($refArticle){
+    Requete::selectFromWhere('Article', 'type , prixUnitaire , titre , auteur , editeur , photo', 'refArticle', $refArticle);
+    require ('view/article.view.php');
+}
+
+function afficheligne ($refArticle){
+    Requete::selectFromWhere('LigneCde', 'qteArtCde' , 'refArticle', $refArticle);
+}
+
+function affichecom ($numCde){
+    Requete::selectFromWhere('Commande', 'dateCde , montant' , 'numCde', $numCde);
+}
 //------------------------------------------------------------------------------
 function delArticle(){
     //TODO delete article
