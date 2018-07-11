@@ -84,9 +84,25 @@ function commande(){
     $c->commande($cli, $dat, $eta);
         //test (echo"new order registred";)
     //creation des variables de session 
-    $_SESSION['numCde'] = $c->getNumCde();
-    $_SESSION['etatCde'] = $c->getEtatCde();
+    $_POST['numCde'] = $c->getNumCde();
+    $_POST['etatCde'] = $c->getEtatCde();
 }
+
+function ligneCde(){
+   
+    require('mdl/LigneCde.php');
+    //initialisation du numero de la commande variable $cde
+    $client = Requete::selectFromWhere('Client', 'idClient', 'pseudo', $_SESSION['pseudo'] );
+    $cli=$client[0]['idClient'];
+    $cde = Requete::selectFromWhere('Commande', 'numCde', 'idClient', $cli);
+    //get des quantites et des articles de cette commande
+    require('view/order.view.php');
+    //creation ligne de commande
+    $l = new LigneCde($ref, $cde, $qte);
+    $l->ligne($ref, $cde, $qte);
+  
+}
+
 function addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur){
     Requete::addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur);
     echo "your new article have been well inserted";

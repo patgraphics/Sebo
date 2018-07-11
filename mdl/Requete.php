@@ -110,8 +110,8 @@ class Requete {
         self::addDatas($sql); 
     }
     
-    public static function addLigne($refArticle, $qteArtCde){
-        $sql = "INSERT INTO `ligneCde` (`refArticle`,`qteArtCde`) VALUES ('".$refArticle."','".$qteArtCde."')";
+    public static function addLigne($refArticle,$numCde,$qteArtCde){
+        $sql = "INSERT INTO `ligneCde` (`refArticle`,`numCde`,`qteArtCde`) VALUES ('".$refArticle."','".$numCde."','".$qteArtCde."')";
         self::addDatas($sql);
     }
     

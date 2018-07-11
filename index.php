@@ -68,15 +68,25 @@ if (isset($_GET["action"])) {
             break;
         case "cde":
             if (isset($_SESSION['pseudo'])) {
-             
-                commande();
+                if(!isset($_SESSION['numCde'])){
+                    commande();
+                }
+                ligneCde();
             }
             else {
-                echo "<h4>Veuillez vous connecter pour valider votre panier ou vous incrire pour vous connecter</h4>";
+                echo "<h4>Veuillez vous connecter pour valider votre panier (d'abord s'inscrire si ce n'est déjà fait)</h4>";
                 cnx();
             }
             break;
- 
+        case "lcd":
+            if (isset($_GET['select'])&&$_GET['select']==1) {
+                    ligneCde();
+            }
+            else{
+                echo "<h4>Veuillez faire un panier SVP</h4>";
+            }
+            break;
+   
         default:
             accueil();
             break;
