@@ -10,9 +10,8 @@ class Commande {
     private $montant;
     private $etatCde;
 
-    public function __construct($idClient,$date) {
-        $this->idClient = $idClient;
-        $this->dateCde = $date;
+    public function __construct() {
+        
     }
     
     public function getDateCde() {
@@ -43,7 +42,7 @@ class Commande {
         $this->etatCde = $etatCde;
     }
 
-    public static function commande($idClient,$dateCde,$etatCde){
+    public  function commande($idClient,$dateCde,$etatCde){
         Requete::addCommande($idClient, $dateCde, $etatCde);
          echo "<h4>Votre commande a bien été enregistrée</h4>";
     }

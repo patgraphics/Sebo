@@ -79,17 +79,23 @@ function commande(){
     $cli=$client[0]['idClient'];
     $dat=date('Y-m-d');
     $eta='1';
+    
+    $n=Requete::getNumCde($_SESSION['idClient'], date('Y-m-d'));
+    print_r($n);
+    
     //creation de la nouvelle commande
-    $c = new Commande($cli,$dat,$eta);
+    $c = new Commande();
     $c->commande($cli, $dat, $eta);
      
     //creation de la variable de session 
- 
-    $n=Requete::getNumCde($_SESSION['idClient'], date('Y-m-d'));
-    $_SESSION['numCde'] = $n[0]['numCde'];
+    //echo "coucou";
+    //print_r(date('Y-m-d'));
+     
+    
+    //$_SESSION['numCde'] = $n[0]['numCde'];
     
     
-    echo" new order registred as ".$_SESSION['numCde'];
+    //echo" new order registred as ".$_SESSION['numCde'];
     
 }
 
