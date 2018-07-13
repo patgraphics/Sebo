@@ -211,7 +211,10 @@ input{
     border: 5px;
     border-radius: 2em;
     width:150px;   
-    height:10px; 
+    height:25px; 
+}
+button{
+    margin-left: 250px;
 }
 .bt2{
     background-color: lightgoldenrodyellow;

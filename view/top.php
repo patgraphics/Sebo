@@ -17,7 +17,7 @@
                 <a href="index.php?action=pan">Liste</a>
                 <a href="index.php?action=prd">Produits</a>
                 <a href="index.php?action=lcd&amp;select=1">Ajouter</a>
-                <a href="index.php?action=cde&amp;pseudo=<?= $_SESSION['pseudo'] ?>">Panier</a>
+                <a href="index.php?action=rec">Panier</a>
                 <a href="index.php?action=cnt">Contact</a>
 
             </div> 

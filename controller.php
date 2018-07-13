@@ -13,7 +13,7 @@ function connection($motpass = "", $pseudo = "") {
 
         if ($connection->conn()) {
 
-            //creation de variable de session 
+            //creation des variables de session 
             $_SESSION['idClient'] = $connection->getIdClient();
             $_SESSION['pseudo'] = $pseudo;
             $_SESSION['time'] = time();          
@@ -82,25 +82,39 @@ function commande(){
     //creation de la nouvelle commande
     $c = new Commande($cli,$dat,$eta);
     $c->commande($cli, $dat, $eta);
-        //test (echo"new order registred";)
-    //creation des variables de session 
-    $_POST['numCde'] = $c->getNumCde();
-    $_POST['etatCde'] = $c->getEtatCde();
+     
+    //creation de la variable de session 
+ 
+    $n=Requete::getNumCde($_SESSION['idClient'], date('Y-m-d'));
+    $_SESSION['numCde'] = $n[0]['numCde'];
+    
+    
+    echo" new order registred as ".$_SESSION['numCde'];
+    
 }
+
+
 
 function ligneCde(){
    
-    require('mdl/LigneCde.php');
-    //initialisation du numero de la commande variable $cde
-    $client = Requete::selectFromWhere('Client', 'idClient', 'pseudo', $_SESSION['pseudo'] );
-    $cli=$client[0]['idClient'];
-    $cde = Requete::selectFromWhere('Commande', 'numCde', 'idClient', $cli);
-    //get des quantites et des articles de cette commande
-    require('view/order.view.php');
-    //creation ligne de commande
-    $l = new LigneCde($ref, $cde, $qte);
-    $l->ligne($ref, $cde, $qte);
-  
+    if (isset($_POST['refArticle'])&&isset($_POST['numCde'])&&isset($_POST['qteArtCde'])){
+        //initialisation des variables
+        $ref=$_POST['refArticle'];
+        $cde=$_POST['numCde'];
+        $qte=$_POST['qteArtCde'];
+        //creation ligne de commande
+        require('mdl/LigneCde.php');
+        $l = new LigneCde($ref, $cde, $qte);
+        $l->ligne($ref, $cde, $qte);
+        }
+    else{
+        require ('view/order.view.php');
+    }    
+}
+
+function addLigneCde($refArticle,$numCde,$qteArtCde){
+    Requete::addLigne($refArticle, $numCde, $qteArtCde);
+    echo"your article is inserted in order ".$_SESSION['numCde'];
 }
 
 function addArticle($type, $idCategorie, $prixUnitaire, $titre, $auteur, $editeur){
@@ -112,6 +126,25 @@ function add(){
     require("admin/new.view.php");
 }
 
+function recap (){
+    $nc = $_SESSION['numCde'];
+
+    $r=Requete::selectFromWhere('Commande', '*', 'numCde', $nc);
+        if ($r){
+            print_r($r);
+        }
+        else{
+            echo "veuillez créer un panier pour commencer";
+        }
+    
+        $x=  Requete::selectFromWhere('ligneCde', '*', 'numCde', $nc);
+        if ($x){
+            print_r($x);
+        }
+        else{
+            echo "remplissez d'abord votre panier avant de l'afficher";
+        }
+}
 
 function contact(){
     require("view/contact.view.php");

@@ -120,7 +120,9 @@ class Requete {
         self::addDatas($sql);
     }
     
-    public static function getArticle ($refArticle){
-        
+    public static function getNumCde ($idClient, $dateCde){
+        $sql = "SELECT numCde FROM Commande WHERE idClient = '".$idClient."' AND dateCde = '".$dateCde."' ";
+        return self::getDatas($sql);
+
     }
 }

@@ -26,7 +26,6 @@ class LigneCde {
     public static function ligne($refArticle, $numCde, $qteArtCde) {       
         Requete::addLigne($refArticle, $numCde, $qteArtCde);
         echo "<h4>Ligne de commande enregistrée</h4>";
-        require ('view/order.view.php');
     }
     
   

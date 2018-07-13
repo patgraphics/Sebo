@@ -43,11 +43,9 @@ class Commande {
         $this->etatCde = $etatCde;
     }
 
-    
     public static function commande($idClient,$dateCde,$etatCde){
         Requete::addCommande($idClient, $dateCde, $etatCde);
-        echo "<h4>Veuillez maintenant remplir votre panier</h4>";
-        require ('view/order.view.php');
+         echo "<h4>Votre commande a bien été enregistrée</h4>";
     }
 
 }
