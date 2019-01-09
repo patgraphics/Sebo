@@ -36,7 +36,6 @@ body {
     margin-top: 0px;
     font-family: 'Ubuntu', cursive;
     background-color: rgb(50, 50, 50);
-    max-width: 1800px;
 }
 h2{
     color: cadetblue;
@@ -44,21 +43,23 @@ h2{
 }
 h4{
     color: lightgoldenrodyellow;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 table{
-    padding: 20px;
-    width: 50%;
     background-color: lightyellow;
-    margin: 10px;
+    /*margin: 10px;*/
     border: 2px;
     border-color: red;
     border-radius: 1em;
     text-align: left;
 }
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: darkgreen;
     font-family: Arial, Helvetica, sans-serif;
 }
 .navbar a {
@@ -71,6 +72,23 @@ table{
 }
 .navbar a:hover {
     background-color: red;
+}    
+.navcnx {
+    display: flex;
+    float: left;
+    background-color: graytext;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navcnx a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navcnx a:hover {
+    background-color: lightsteelblue;   
 }
 .bas{
     margin-top: 30px;
@@ -88,8 +106,7 @@ table{
 {
     padding: 50px;
     margin: auto ;
-    width: 45%;
-    height: 500px;
+    width: 50%;
     background-color: rgb(192, 226, 208) ;
 }
 #d1{
@@ -164,16 +181,15 @@ table{
 }
 
 .panel{
-    width:90%;max-width:190px;padding:12px 12px;margin-left:50px;margin-bottom:20px;
+    width:90%;max-width:760px;padding:2px 2px;margin-left:50px;
 }
 button:hover {
     background-color: rgb(255, 204, 255);
 }
 p{
-    padding: 0px 40px 0px 40px;
+    padding: 0px 20px 0px 20px;
     text-align: justify;
     font-family: geneva;
-    margin-left: 150px;
     color: lightyellow;
 }
 td {
@@ -195,7 +211,10 @@ input{
     border: 5px;
     border-radius: 2em;
     width:150px;   
-    height:10px; 
+    height:25px; 
+}
+button{
+    margin-left: 250px;
 }
 .bt2{
     background-color: lightgoldenrodyellow;
@@ -238,14 +257,14 @@ input{
 .droite{
     position: absolute;
     right: 50px;
-    top:100px;
+    bottom:100px;
 }
 .gauche{
     position: absolute;
-    left: 50px;
+    right: 50px;
     top: 100px;
-    color:wheat;
 }
-
-
-
+.latchav{
+    position: relative;
+    left: 50px;
+}

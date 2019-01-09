@@ -7,7 +7,7 @@ Points d'entrées pour rediriger l'utilisateur vers la page demandée
 Ce fichier sert de routeur et renvoie vers les fonctions du controlleur
  */
 //inclusion de l'entête html
-require("view/top.html");
+require("view/top.php");
 
 //appel de mon controlleur
 require ("controller.php");
@@ -36,6 +36,7 @@ if (isset($_GET["action"])) {
             deconnection();
             break;
         case "new":
+            echo " add a new article";
             if(isset($_POST['type']) && isset($_POST['idCategorie']) && isset($_POST['prixUnitaire']) && isset($_POST['titre']) && isset( $_POST['auteur']) && isset($_POST['editeur'])){
                 if(($_POST['type'])!="" && ($_POST['idCategorie'])!="" && ($_POST['prixUnitaire'])!="" && ($_POST['titre'])!="" && ( $_POST['auteur'])!="" && ($_POST['editeur'])!=""){
                     addArticle($_POST['type'], $_POST['idCategorie'], $_POST['prixUnitaire'], $_POST['titre'], $_POST['auteur'], $_POST['editeur']); 
@@ -65,11 +66,43 @@ if (isset($_GET["action"])) {
         case "prd":
             produits();
             break;
- 
+        case "cde":
+            if (isset($_SESSION['pseudo'])) {
+                commande();
+            }
+            else {
+                echo "<h4>Veuillez vous connecter pour valider votre panier (s'inscrire si ce n'est pas encore fait)</h4>";
+                cnx();
+            }
+            break;
+        case "lcd":
+            if (isset($_SESSION['pseudo'])) {
+                ligneCde();
+            }
+            else{
+                echo "<h4>Veuillez faire un panier SVP</h4>";
+                cnx();
+            }
+            break;
+        case "rec":
+            if (isset($_SESSION['pseudo'])) {
+                recap();
+            }
+            else {
+                echo "<h4>Veuillez vous connecter pour valider votre panier (s'inscrire si ce n'est pas encore fait)</h4>";
+                cnx();
+            }
+            break;
         default:
             accueil();
             break;
     }
+}
+elseif (isset($_GET['art']) && $_GET['art'] == 1) {
+    afficharticle($_GET['refArticle']);
+}
+elseif (isset($_GET['com']) && $_GET['com'] == 1) {
+    affichecom($_GET['numCde']);
 }
 else {
     accueil ();

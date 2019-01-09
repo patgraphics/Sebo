@@ -27,26 +27,23 @@ class Connection {
 
     public function conn() {
         $res = FALSE;
-        print_r($res);
 
         $result = Requete::selectFromWhere("Client", "idClient, password", "pseudo", $this->pseudo);
     
         if ($result) {                    
             
-                  
-                if (password_verify($this->motdepasse, $result[0]['password'])) {
+                 if (password_verify($this->motdepasse, $result[0]['password'])) {
 
                     $this->result = "Connection réussie";
                     $this->idClient = $result[0]['idClient'];
                     $res = TRUE;
                 } else {
-                    $this->error = "isNotPassword";                   
-       
+                    $this->error = " erreur ! mot de passe incorrect";                   
+                    print_r($this->error);
                 }
             } else {
-                 $this->error = "isNotPseudo";
+                 $this->error = " désolé, ce pseudo n'existe pas";
                  print_r($this->error);
-
             }
         return $res;
         
